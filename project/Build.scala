@@ -10,7 +10,8 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
-    anorm
+    anorm,
+    "net.databinder.dispatch" %% "dispatch-core" % "0.11.0"
   )
 
 
