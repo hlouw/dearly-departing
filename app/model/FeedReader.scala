@@ -1,3 +1,5 @@
+package model
+
 import dispatch._, Defaults._
 import xml._
 
@@ -9,7 +11,8 @@ trait FeedReader {
     future()
   }
   
-  def get = XML loadString pull
+  def get = {
+    val raw = pull
+    XML loadString raw.substring(raw indexOf '\n')
+  }
 }
-
-class LineStatus
