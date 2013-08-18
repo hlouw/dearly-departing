@@ -1,0 +1,12 @@
+@(statuses: List[TubeStatus])
+
+<h1>Tube Status</h1>
+
+<table>
+@for(status <- statuses) {
+	<tr>
+		<td>@status.line</td>
+		<td>@status.status</td>
+	</tr>
+}
+</table>

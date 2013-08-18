@@ -3,6 +3,7 @@ package controllers
 import play.api._
 import play.api.mvc._
 import models.FeedReader
+import models.TubeStatus
 
 object Application extends Controller {
   
@@ -13,7 +14,8 @@ object Application extends Controller {
   }
   
   def tubeStatus = Action {
-    Ok(feedReader.get)
+    val statuses = TubeStatus.getStatuses(feedReader.get)
+    Ok(views.html.tubestatus(statuses))
   }
   
 }
