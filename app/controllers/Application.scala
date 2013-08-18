@@ -2,7 +2,7 @@ package controllers
 
 import play.api._
 import play.api.mvc._
-import model.FeedReader
+import models.FeedReader
 
 object Application extends Controller {
   
