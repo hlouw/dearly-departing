@@ -1,12 +1,65 @@
 @(statuses: List[TubeStatus])
 
-<h1>Tube Status</h1>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tube Status</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap/css/bootstrap.min.css")">
+	    <style>
+	      body {
+	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	      }
+	    </style>                
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap/css/bootstrap-responsive.min.css")">        
+	</head>
+	
+	<body>		
+		<!-- Navigation -->
+	    <div class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="brand" href="#">Dearly Departing</a>
+	          <div class="nav-collapse collapse">
+	            <ul class="nav">
+	              <li class="active"><a href="#">Home</a></li>
+	              <li><a href="#about">About</a></li>
+	              <li><a href="#contact">Contact</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
+        
+        <!-- Tube status table -->
+		<div class="container">
+			<h2>Tube Status</h2>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Line</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+				@for(status <- statuses) {
+					<tr>
+						<td>@status.line</td>
+						<td>@status.status</td>
+					</tr>
+				}
+				</tbody>
+			</table>
+		</div>
+		
+		<!-- JavaScript -->
+		<!-- Placed at end of document so the page loads faster -->
+	    <script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>		
+	</body>
 
-<table>
-@for(status <- statuses) {
-	<tr>
-		<td>@status.line</td>
-		<td>@status.status</td>
-	</tr>
-}
-</table>
+</html>
