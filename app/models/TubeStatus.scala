@@ -1,4 +1,4 @@
-package model
+package models
 
 object TubeStatus {
   def apply(node: xml.Node): TubeStatus = {

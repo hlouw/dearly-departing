@@ -1,4 +1,4 @@
-package model
+package models
 
 import dispatch._, Defaults._
 import xml._
