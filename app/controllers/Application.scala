@@ -10,7 +10,7 @@ object Application extends Controller {
   val feedReader = new Object with FeedReader
   
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.index("Your new application is ready."))))
   }
   
   def tubeStatus = Action {
