@@ -9,15 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#">Dearly Departing</a>
+      <a class="brand" href="@routes.Application.index()">Dearly Departing</a>
       <div class="nav-collapse collapse">
         <p class="navbar-text pull-right">
-          Logged in as <a href="#" class="navbar-link">@username</a>
+          Logged in as <a href="@routes.Application.profile()" class="navbar-link">@username</a>
         </p>
         <ul class="nav">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/tubestatus">Dashboard</a></li>
-          <li><a href="/profile">Profile</a></li>
+          <li class="active"><a href="@routes.Application.index()">Home</a></li>
+          <li><a href="@routes.Application.tubeStatus()">Dashboard</a></li>
+          <li><a href="@routes.Application.profile()">Profile</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
