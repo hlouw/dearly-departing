@@ -18,4 +18,7 @@ object Application extends Controller {
     Ok(views.html.tubestatus(statuses))
   }
   
+  def profile = Action {
+    Ok(views.html.profile())
+  }
 }
