@@ -1,7 +1,26 @@
-@(message: String)
+@(username: String)
 
-@main("Welcome to Play 2.1", "hlouw") {
+@main("Welcome", username) {
     
-    @play20.welcome(message)
+    <div class="container">
+    	<div class="hero-unit">
+    		<h1>Dearly Departing</h1>
+    		<p>Welcome to your departures most dear.</p>
+    	</div>
+    	<div class="row-fluid">
+    		<div class="span4">
+    			<h2>Dashboard</h2>
+    			<p>Your favourite departures at a glance.</p>
+    		</div>
+    		<div class="span4">
+    			<h2>Profile</h2>
+    			<p>Tell us which departure updates you're interested in.</p>
+    		</div>
+    		<div>
+    			<h2>Support</h2>
+    			<p>In theory, at least.</p>
+    		</div>
+    	</div>
+    </div>
     
 }
