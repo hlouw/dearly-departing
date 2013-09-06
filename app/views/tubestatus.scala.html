@@ -6,20 +6,32 @@
 		<title>Travel Status</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap/css/bootstrap.css")">
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap/css/bootstrap-responsive.css")">        
-
 	    <style>
 	      body {
-	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	        padding-top: 60px;
+	        padding-bottom: 40px;
 	      }
-	    </style>                
+	      .sidebar-nav {
+	        padding: 9px 0;
+	      }
+	
+	      @@media (max-width: 980px) {
+	        /* Enable use of floated navbar text */
+	        .navbar-text.pull-right {
+	          float: none;
+	          padding-left: 5px;
+	          padding-right: 5px;
+	        }
+	      }
+	    </style>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap/css/bootstrap-responsive.css")">	    
 	</head>
 	
 	<body>		
 		<!-- Navigation -->
-	    <div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar navbar-fixed-top">
 	      <div class="navbar-inner">
-	        <div class="container">
+	        <div class="container-fluid">
 	          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
@@ -27,6 +39,9 @@
 	          </button>
 	          <a class="brand" href="#">Dearly Departing</a>
 	          <div class="nav-collapse collapse">
+	            <p class="navbar-text pull-right">
+	              Logged in as <a href="#" class="navbar-link">Username</a>
+	            </p>
 	            <ul class="nav">
 	              <li class="active"><a href="#">Home</a></li>
 	              <li><a href="#about">About</a></li>
@@ -38,9 +53,32 @@
 	    </div>
         
         <!-- Tube status table -->
-		<div class="container">
-			<div class="row">
-				<div class="span9">
+		<div class="container-fluid">			
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="well sidebar-nav">
+			            <ul class="nav nav-list">
+			              <li class="nav-header">Sidebar</li>
+			              <li class="active"><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li class="nav-header">Sidebar</li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li class="nav-header">Sidebar</li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			              <li><a href="#">Link</a></li>
+			            </ul>
+					</div><!--/.well -->
+									
+				</div>
+				<div class="span6">
 					<h2>Tube Status</h2>
 					<table class="table table-bordered table-striped">
 						<thead>
@@ -60,6 +98,7 @@
 					</table>
 				</div>
 				<div class="span3">
+					<h2>Travel Updates</h2>
 					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TfLOfficial" data-widget-id="373778672999616513">Tweets by @@TfLOfficial</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
