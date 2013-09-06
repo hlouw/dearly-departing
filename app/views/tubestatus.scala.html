@@ -37,9 +37,10 @@
 	      </div>
 	    </div>
         
-        <div class="container">
-	        <div class="row">	        
-	        	<div class="span6">
+        <!-- Tube status table -->
+		<div class="container">
+			<div class="row">
+				<div class="span9">
 					<h2>Tube Status</h2>
 					<table class="table table-bordered table-striped">
 						<thead>
@@ -58,28 +59,12 @@
 						</tbody>
 					</table>
 				</div>
-				
-				<div class="span6">
- 					<h2>Live Bus Departures</h2>
-					<table class="table table-bordered table-striped">
-						<thead>
-							<tr>
-								<th>Line</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-						@for(status <- statuses) {
-							<tr>
-								<td>@status.line</td>
-								<td>@status.status</td>
-							</tr>
-						}
-						</tbody>
-					</table>
-	        	</div>
-	        </div>
-        </div>
+				<div class="span3">
+					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/TfLOfficial" data-widget-id="373778672999616513">Tweets by @@TfLOfficial</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+		</div>
 		
 		<!-- JavaScript -->
 		<!-- Placed at end of document so the page loads faster -->
